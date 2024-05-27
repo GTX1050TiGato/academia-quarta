@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.transi{
+    transition: all 1s;
+}
+
+.zap::before{
+    content: '';
+    display: inline-block; /* ou block, dependendo do seu layout */
+    width: 3rem; /* ajuste conforme necessário */
+    height: 3rem; /* ajuste conforme necessário */
+    background-image: url('zap.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
