@@ -16,3 +16,13 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.clickme{
+    cursor: pointer;
+    transition: all 5s;
+    }
+
+.clickme:hover{
+    scale: 1.1;
+    
+}
+
