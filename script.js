@@ -87,7 +87,7 @@ function baixar() {
 async function numero() {
         // TESTE CONSULTA BANCO DE DADOS (MONGODB) -- SAMUEL
 
-        const result = await fetch('http://34.123.62.182:5678/webhook/academia'); //ATIVA A API -- SAMUEL
+        const result = await fetch("http://34.123.62.182:5678/webhook/academia"); //ATIVA A API -- SAMUEL
         const data = await result.json(); // ARMAZENA O RESULTADO DA API NA VARIÁVEL -- SAMUEL
         var giro = data[0].sum_giro; // ARMAZENA O VALOR DA SOMA DOS GIROS NA VARIÁVEL -- SAMUEL
 
