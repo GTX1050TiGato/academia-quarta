@@ -15,14 +15,38 @@
     background-image: url('zap.png');
     background-size: contain;
     background-repeat: no-repeat;
+    scale: 0.75;
+    margin: auto;
+    
+    top: 6;
+    left: 50%;
+    
 }
 .clickme{
     cursor: pointer;
-    transition: all 5s;
-    }
+    transition: all 1s;
+}
+
+.insta::before{
+    content: ' ';
+    
+    display: inline-block; /* ou block, dependendo do seu layout */
+    width: 3rem; /* ajuste conforme necessário */
+    height: 3rem; /* ajuste conforme necessário */
+    background-image: url('insta.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    scale: 0.75;
+    
+   
+}
 
 .clickme:hover{
     scale: 1.1;
     
+}
+
+.linha{
+    pointer-events: none;
 }
 
