@@ -19,10 +19,36 @@ function line() {
 function baixar() {
     const conteudoDiv = document.getElementById('conteudo');
     const qrCodeImage = document.createElement('img');
+    const h1 = document.createElement('h1');
+    const button = document.createElement('button');
+    const h2 = document.createElement('h1');
+    const buttonpre = document.getElementById('baixar')
+
+
+    button.textContent = 'Download';
+
+    button.className = buttonpre.className;
+
+    button.classList.add('clickme', 'm-auto', 'content-center');
     
+    button.style.width = '90%'
+
+    h1.textContent= 'Download QR code';
+
+    h1.classList.add('text-2xl', 'content-center', 'my-5');
+
+    h1.style.textAlign = 'center';
+    
+    h2.className = h1.className;
+
+    h2.style.textAlign = h1.style.textAlign;
+
+    h2.textContent = 'Baixe o app no botão abaixo'
+
     qrCodeImage.src = 'qr-code-plus.png'; // Caminho para a sua imagem QR code
     qrCodeImage.alt = 'QR Code';
-    qrCodeImage.classList.add('w-1/3', 'bg-white', 'rounded-md', 'clickme');
+    qrCodeImage.classList.add('w-1/3', 'bg-white', 'rounded-md', 'clickme', 'content-center', 'self-center', 'mx-auto');
+
 
     // Adicionar a transição ao estilo
     qrCodeImage.style.transition = 'all 1s';
@@ -37,7 +63,11 @@ function baixar() {
 
     conteudoDiv.appendChild(qrCodeImage);
     
+    conteudoDiv.appendChild(h1);
+    line()
+    conteudoDiv.appendChild(h2);
 
+    conteudoDiv.appendChild(button);
     // Usar setTimeout para aplicar o efeito fade-in após adicionar o elemento ao DOM
     setTimeout(() => {
         qrCodeImage.style.opacity = 1;
