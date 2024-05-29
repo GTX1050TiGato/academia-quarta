@@ -29,7 +29,7 @@ function baixar() {
 
     button.className = buttonpre.className;
 
-    button.classList.add('clickme', 'm-auto', 'content-center');
+    button.classList.add('clickme', 'm-auto', 'content-center', 'mb-5');
     
     button.style.width = '90%'
 
