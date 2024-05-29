@@ -84,7 +84,16 @@ function baixar() {
 
 
 // Função para mostrar o número de pessoas na academia
-function numero() {
+async function numero() {
+        // TESTE CONSULTA BANCO DE DADOS (MONGODB) -- SAMUEL
+
+        const result = await fetch("http://34.123.62.182:5678/webhook/academia"); //ATIVA A API -- SAMUEL
+        const data = await result.json(); // ARMAZENA O RESULTADO DA API NA VARIÁVEL -- SAMUEL
+        var giro = data[0].sum_giro; // ARMAZENA O VALOR DA SOMA DOS GIROS NA VARIÁVEL -- SAMUEL
+
+        // -------------------------------------------------------------------
+
+
     const conteudoDiv = document.getElementById('conteudo');
     const h1 = document.createElement('h1');
     const h2 = document.createElement('h2');
@@ -116,7 +125,7 @@ function numero() {
 
 
         h2.classList.add ('my-12');
-        h2.textContent = '000';
+        h2.textContent = giro;
     // Limpar qualquer conteúdo existente na div
     while (conteudoDiv.firstChild) {
         conteudoDiv.removeChild(conteudoDiv.firstChild);
