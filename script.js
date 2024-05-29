@@ -52,10 +52,15 @@ function baixar() {
 
     // Adicionar a transição ao estilo
     qrCodeImage.style.transition = 'all 1s';
+    h1.style.transition = 'all 1s';
+    h2.style.transition = 'all 1s';
+    button.style.transition = 'all 1s';
 
     // Inicialmente, definir a opacidade como 0 para o efeito fade-in
     qrCodeImage.style.opacity = 0;
-
+    h1.style.opacity = 0;
+    h2.style.opacity = 0;
+    button.style.opacity = 0;
     // Remover QR Code existente antes de adicionar um novo
     while (conteudoDiv.firstChild) {
         conteudoDiv.removeChild(conteudoDiv.firstChild);
@@ -71,6 +76,9 @@ function baixar() {
     // Usar setTimeout para aplicar o efeito fade-in após adicionar o elemento ao DOM
     setTimeout(() => {
         qrCodeImage.style.opacity = 1;
+        h1.style.opacity = 1;
+        h2.style.opacity = 1;
+        button.style.opacity = 1;
     }, 10); // Pequeno atraso para garantir que o navegador registre a mudança de opacidade
 }
 
