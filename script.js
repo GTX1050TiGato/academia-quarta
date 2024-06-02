@@ -143,6 +143,8 @@ async function numero() {
 
 }
 
+window.onload = numero();
+
 
 
 function contato() {
