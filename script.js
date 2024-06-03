@@ -66,6 +66,10 @@ function baixar() {
         conteudoDiv.removeChild(conteudoDiv.firstChild);
     }
 
+    button.onclick = function() {
+        window.open('https://drive.google.com/file/d/1Q9oxZE202GQ64nQjqrwzfwwwUQh9kK8-/view?usp=sharing', '_blank');
+    };
+
     conteudoDiv.appendChild(qrCodeImage);
     
     conteudoDiv.appendChild(h1);
