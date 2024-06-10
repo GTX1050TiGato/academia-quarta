@@ -104,8 +104,8 @@ async function numero() {
     const lin = document.createElement('img');
     const cap = document.createElement('h1');
     h1.classList.add('text-3xl', 'text-white', 'text-center');
-    h1.textContent = 'Número de Pessoas na Academia' // Definir o texto do <h1>
-    cap.textContent = 'Capacidade: 150';
+    h1.textContent = 'Número de Pessoas pressente na Academia:' // Definir o texto do <h1>
+    cap.textContent = 'Capacidade maxíma: 150';
     
 
     lin.src = 'linha.png';
@@ -141,10 +141,13 @@ async function numero() {
     }
 
     // Adicionar o <h1> à div
-    conteudoDiv.appendChild(h1);
-    
     conteudoDiv.appendChild(cap);
+    
+    
     conteudoDiv.appendChild(lin);
+    
+    
+    conteudoDiv.appendChild(h1);
     conteudoDiv.appendChild(h2);
     setTimeout(() => {
         h1.style.opacity = 1;
