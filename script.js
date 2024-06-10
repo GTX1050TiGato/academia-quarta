@@ -83,6 +83,7 @@ function baixar() {
         h1.style.opacity = 1;
         h2.style.opacity = 1;
         button.style.opacity = 1;
+        
     }, 10); // Pequeno atraso para garantir que o navegador registre a mudança de opacidade
 }
 
@@ -103,9 +104,11 @@ async function numero() {
     const h2 = document.createElement('h2');
     const lin = document.createElement('img');
     const cap = document.createElement('h1');
+    const media = document.createElement('h1');
     h1.classList.add('text-3xl', 'text-white', 'text-center');
     h1.textContent = 'Número de Pessoas pressente na Academia:' // Definir o texto do <h1>
-    cap.textContent = 'Capacidade maxíma: 150';
+    cap.textContent = 'Capacidade maxíma: 200';
+    media.textContent = 'Lotação média: 50';
     
 
     lin.src = 'linha.png';
@@ -120,6 +123,7 @@ async function numero() {
         lin.style.transition = 'opacity 1s';
         h2.style.transition = 'opacity 1s';
         cap.style.transition = 'opacity 1s';
+        media.style.transition = 'opacity 1s';
         h2.style.fontSize = '5em';
         
 
@@ -128,10 +132,13 @@ async function numero() {
         lin.style.opacity = 0;
         h2.style.opacity = 0;
         cap.style.opacity = 0;
-        cap.style.marginTop = '10%';
+        media.style.opacity = 0;
+        cap.style.marginTop = '2%';
+        media.style.marginTop = '10%';
         h2.className = h1.className;
         cap.className = h1.className;
-
+        media.className = h1.className;
+        
 
         h2.classList.add ('my-12');
         h2.textContent = giro;
@@ -139,9 +146,12 @@ async function numero() {
     while (conteudoDiv.firstChild) {
         conteudoDiv.removeChild(conteudoDiv.firstChild);
     }
+    
 
     // Adicionar o <h1> à div
     conteudoDiv.appendChild(cap);
+
+    conteudoDiv.appendChild(media);
     
     
     conteudoDiv.appendChild(lin);
@@ -153,6 +163,7 @@ async function numero() {
         h1.style.opacity = 1;
         lin.style.opacity = 1;
         h2.style.opacity = 1;
+        media.style.opacity = 1;
         cap.style.opacity = 1;
     }, 10); // Pequeno atraso para garantir que o navegador registre a mudança de opacidade
 
