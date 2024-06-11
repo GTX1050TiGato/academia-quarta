@@ -1,3 +1,35 @@
+function limpar2(conteudoDiv){
+    while (conteudoDiv.firstChild) {
+        conteudoDiv.removeChild(conteudoDiv.firstChild);
+    }
+}
+
+
+function limpar(conteudoDiv) {
+    while (conteudoDiv.firstChild) {
+        conteudoDiv.removeChild(conteudoDiv.firstChild);
+    }
+
+    const wait = document.createElement('h1');
+    wait.textContent = '...';
+    wait.style.fontSize = '5em';
+    wait.classList.add('text-white', 'text-center');
+
+    wait.style.transition = 'opacity 1s';
+    wait.style.opacity = 0;
+    
+    setTimeout(() => {
+        wait.style.opacity = 1;
+       
+    }, 10);
+
+
+    conteudoDiv.appendChild(wait);
+    
+    
+}
+
+
 function line() {
     const conteudoDiv = document.getElementById('conteudo'); // Select the target div
     const lin = document.createElement('img');
@@ -90,6 +122,9 @@ function baixar() {
 
 // Função para mostrar o número de pessoas na academia
 async function numero() {
+    const conteudoDiv = document.getElementById('conteudo');
+    limpar(conteudoDiv)
+    
         // TESTE CONSULTA BANCO DE DADOS (MONGODB) -- SAMUEL
 
         const result = await fetch("https://n8n.projetosdev.top/webhook/academia"); //ATIVA A API -- SAMUEL
@@ -99,17 +134,18 @@ async function numero() {
         // -------------------------------------------------------------------
 
 
-    const conteudoDiv = document.getElementById('conteudo');
+    
     const h1 = document.createElement('h1');
     const h2 = document.createElement('h2');
     const lin = document.createElement('img');
     const cap = document.createElement('h1');
     const media = document.createElement('h1');
     h1.classList.add('text-3xl', 'text-white', 'text-center');
-    h1.textContent = 'Número de Pessoas presente na Academia:' // Definir o texto do <h1>
+    h1.textContent = 'Número de Pessoas pressente na Academia:' // Definir o texto do <h1>
     cap.textContent = 'Capacidade maxíma: 200';
     media.textContent = 'Lotação média: 50';
     
+
 
     lin.src = 'linha.png';
     lin.classList.add('linha','m-5');
@@ -142,12 +178,10 @@ async function numero() {
 
         h2.classList.add ('my-12');
         h2.textContent = giro;
-    // Limpar qualquer conteúdo existente na div
-    while (conteudoDiv.firstChild) {
-        conteudoDiv.removeChild(conteudoDiv.firstChild);
-    }
+    // faça uma função limpar
     
-
+    
+    limpar2(conteudoDiv)
     // Adicionar o <h1> à div
     conteudoDiv.appendChild(cap);
 
@@ -175,6 +209,7 @@ window.onload = numero();
 
 function contato() {
     const conteudoDiv = document.getElementById('conteudo');
+    limpar(conteudoDiv);
     const h1 = document.createElement('h1');
     const h1map = document.createElement('h1');
 
@@ -207,10 +242,7 @@ function contato() {
         window.open('https://www.google.com/maps/place/Gênesis+Academia/@-1.4145842,-48.4691754,17z/data=!3m1!4b1!4m6!3m5!1s0x92a48b657b3d2711:0xc1cdde4382ab63dd!8m2!3d-1.4145842!4d-48.4666005!16s%2Fg%2F11qmmd3zxs?entry=ttu', '_blank');
     };
     
-    // Limpar qualquer conteúdo existente na div
-    while (conteudoDiv.firstChild) {
-        conteudoDiv.removeChild(conteudoDiv.firstChild);
-    }
+    limpar2(conteudoDiv);
 
     // Adicionar o <h1> e o mapa à div
     conteudoDiv.appendChild(h1);
