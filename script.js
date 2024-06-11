@@ -141,7 +141,7 @@ async function numero() {
     const cap = document.createElement('h1');
     const media = document.createElement('h1');
     h1.classList.add('text-3xl', 'text-white', 'text-center');
-    h1.textContent = 'Número de Pessoas pressente na Academia:' // Definir o texto do <h1>
+    h1.textContent = 'Número de Pessoas presente na Academia:' // Definir o texto do <h1>
     cap.textContent = 'Capacidade maxíma: 200';
     media.textContent = 'Lotação média: 50';
     
