@@ -99,7 +99,7 @@ function baixar() {
     }
 
     button.onclick = function() {
-        window.open('https://drive.google.com/file/d/1Q9oxZE202GQ64nQjqrwzfwwwUQh9kK8-/view?usp=sharing', '_blank');
+        window.open('https://expo.dev/accounts/lucas99775588/projects/genesis/builds/2ad47848-5d63-4c41-af73-07a9ff5ec9ae', '_blank');
     };
 
     conteudoDiv.appendChild(qrCodeImage);
